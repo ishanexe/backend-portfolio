@@ -6,9 +6,8 @@ connectToMongo();
 const app = express()
 const port = 5000  
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://ishandutta.netlify.app'],
-}));
-
+  origin: 'https://ishandutta.netlify.app',  // Allow requests from your frontend URL
+}))
 app.use(express.json())
 app.use(cors())
 
